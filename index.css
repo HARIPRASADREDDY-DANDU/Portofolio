@@ -441,6 +441,12 @@ nav{
         margin-bottom: 30px;
         height: fit-content;
     }
+    .bd{
+        width: 80%;
+    }
+    .ips{
+        width: 80%;
+    }
 }
 
 
@@ -554,5 +560,11 @@ nav{
         margin-top: 30px;
         margin-bottom: 30px;
         height: fit-content;
+    }
+    .bd{
+        width: 100%;
+    }
+    .ips{
+        width: 95%;
     }
 }
