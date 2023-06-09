@@ -120,7 +120,7 @@ nav{
 
 .box{
     width: 320px;
-    height: 400px;
+    height: 440px;
     background-color: #212428;
     border-radius: 30px;
     /* box-shadow: 4px 6px 33px 29px rgba(0,0,0,0.45); */
@@ -140,6 +140,10 @@ nav{
     transform: translateX(-6000%);
     /* display: none; */
 }
+.txta{
+    width: 270px;
+}
+
 .box:hover{
     .arrow{
         display: flex;
@@ -241,7 +245,7 @@ nav{
     transform: translateY(40px);
     visibility: visible;
     margin-bottom: 40px;
-    .box{
+    .box,#skillbar,#cert{
         animation: bo 2s ease-in-out;
     }
     .subbc,.subb,.subbj,.subbjs,.subbs{
@@ -342,6 +346,14 @@ nav{
     margin-bottom: 30px;
     row-gap: 30px;
 }
+.ti,#ti{
+    color: #ff014e;
+    margin-top: 10px;
+    font-size: x-large;
+}
+.contactinfo{
+    margin-top: 20px;
+}
 
 
 
@@ -392,12 +404,11 @@ nav{
     .navm{
         display: none;
         flex-direction: column;
-        margin-top: 10px;
+        margin-top: 30px;
         transform: translateX(-150%);
-        width: 100%;
-        background-color: transparent;
         align-items: center;
-        row-gap: 5px;
+        row-gap: 30px;
+        padding: 10px;
     }
     #toggle:checked + .navm{
         transform: translateX(0%);
@@ -516,8 +527,10 @@ nav{
         width: 100%;
         background-color: transparent;
         align-items: center;
-        row-gap: 5px;
+        row-gap: 30px;
+        padding: 10px;
     }
+    
     #toggle:checked + .navm{
         transform: translateX(0%);
         transition: 0.3s ease-in-out;
