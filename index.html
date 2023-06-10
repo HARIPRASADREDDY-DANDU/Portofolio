@@ -95,7 +95,18 @@
             </section>
         </section>
     </section>
-
+    <div id="chatbot-popup">
+        <div id="chatbot-container">
+            <div id="chatbot-messages">
+                <div class="message chatbot">What do you like to know about me?</div>
+            </div>
+        </div>
+        <div id="chatbot-input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <img src="bot2.gif" alt="Chatbot Logo" id="chatbot-logo" onclick="toggleChatbotPopup()" width="100px" height="100px">
     <!-- What i Do -->
     <section id="about" >
         <center>
@@ -331,6 +342,68 @@
                     reveals[i].classList.remove('active');
                 }
             }
+        }
+
+
+        var chatbotMessages;
+        var userInput;
+
+        document.addEventListener("DOMContentLoaded", function() {
+        chatbotMessages = document.getElementById('chatbot-messages');
+        userInput = document.getElementById('user-input');
+        });
+
+        function toggleChatbotPopup() {
+        var chatbotPopup = document.getElementById('chatbot-popup');
+        chatbotPopup.style.display = (chatbotPopup.style.display === 'none') ? 'block' : 'none';
+        }
+
+        function sendMessage() {
+        var userMessage = userInput.value;
+        displayUserMessage(userMessage);
+        processUserMessage(userMessage);
+        userInput.value = '';
+        }
+
+        function displayUserMessage(message) {
+        var userMessageElement = document.createElement('div');
+        userMessageElement.className = 'message user';
+        userMessageElement.textContent = message;
+        chatbotMessages.appendChild(userMessageElement);
+        scrollToBottom();
+        }
+
+        function displayChatbotMessage(message) {
+        var chatbotMessageElement = document.createElement('div');
+        chatbotMessageElement.className = 'message chatbot';
+        chatbotMessageElement.textContent = message;
+        chatbotMessages.appendChild(chatbotMessageElement);
+        scrollToBottom();
+        }
+
+        function processUserMessage(message) {
+            if(message==="Hi" || message==="hi"){
+                message = "Hello";
+                displayChatbotMessage(message);
+            }
+            else if(message==="How are you" || message==="how are you" || message==="How are you?" || message==="how are you?" || message==="how are you ?" || message==="How are you ?"){
+                displayChatbotMessage("Doing Good! What about you.?");
+            }
+            else if(message==="good" || message==="Good" || message==="fine" || message==="Fine" || message==="Doing good"|| message==="doing good"){
+                displayChatbotMessage("Glad to here that. What do you like to know about me.");
+            }
+            else{
+                displayChatbotMessage("Contact Me for More Information. Details are in home.");
+            }
+            
+        }
+
+        function scrollToBottom() {
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function scrollToTop() {
+        chatbotMessages.scrollTop = 0;
         }
     </script>
 </body>
