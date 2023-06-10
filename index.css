@@ -8,7 +8,7 @@ body{
     font-family: 'Chivo Mono', monospace;
 }
 nav{
-    width: 100%;
+    width: 96vw;
     display: flex;
     flex-direction: row;
     height: 50px;
@@ -16,7 +16,11 @@ nav{
     align-items: center;
     border-bottom-style: solid;
     border-color: rgb(255, 136, 0);
-    /* position: fixed; */
+    position: fixed;
+    z-index: 999999;
+    background-color: rgb(33 36 40);
+    margin-top: -50px;
+
 }
 .logon{
     font-size: xx-large;
@@ -53,6 +57,7 @@ nav{
     height: 100vh;
     border-bottom-style: solid;
     border-color: rgb(255, 136, 0);
+    margin-top: 50px;
 }
 .image{
     display: flex;
@@ -483,7 +488,9 @@ background-color: #f5f5f5;
         flex-direction: column;
         height: fit-content;
     }
-
+    .nav{
+        margin-top: 20px;
+    }
     .items{
         display: none;
     }
@@ -513,11 +520,15 @@ background-color: #f5f5f5;
     .navm{
         display: none;
         flex-direction: column;
-        margin-top: 30px;
+        /* margin-top: -62px; */
         transform: translateX(-150%);
         align-items: center;
         row-gap: 30px;
         padding: 10px;
+        position: fixed;
+        z-index: 99999;
+        width: 100%;
+        background-color: #212428;
     }
     #toggle:checked + .navm{
         transform: translateX(0%);
@@ -530,6 +541,7 @@ background-color: #f5f5f5;
         margin-right: 0px;
         margin-top: 40px;
         margin-bottom: 60px;
+        margin-left: 20px;
     }
     .resumeimg{
         width: 700px;
@@ -608,6 +620,9 @@ background-color: #f5f5f5;
     .items{
         display: none;
     }
+    nav{
+        width: 90vw;
+    }
     .ham{
         width: 100%;
         display: flex;
@@ -647,6 +662,10 @@ background-color: #f5f5f5;
         transform: translateX(0%);
         transition: 0.3s ease-in-out;
         display: flex;
+        position: fixed;
+        background-color: #3d3e3f;
+        width: 86vw;
+        z-index: 99999;
     }
     .image{
         width: 100%;
