@@ -340,6 +340,7 @@ nav{
     height: 40px;
     border-style: none;
     border-radius: 5px;
+    text-align: center;
 }
 .btn{
     padding: 8px;
