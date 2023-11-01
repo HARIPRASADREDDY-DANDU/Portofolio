@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200&display=swap');
-/* #ff014e; */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 body{
     background-color: rgb(33 36 40);
     color: #c3cedd;
     margin-left: 20px;
     margin-right: 20px;
-    font-family: 'Chivo Mono', monospace;
+    font-family: 'Rubik', sans-serif;
 }
 nav{
     width: 96vw;
@@ -21,6 +20,12 @@ nav{
     background-color: rgb(33 36 40);
     margin-top: -50px;
 
+}
+.tools{
+    margin-right: 10px;
+}
+.toolsright{
+    margin-left: 15px;
 }
 .logon{
     font-size: xx-large;
@@ -214,7 +219,7 @@ nav{
 
 }
 .subbj{
-    width: 96%;
+    width: 92%;
     height: 10px;
     background-color:#ff014e;
     border-style: none;
@@ -222,7 +227,7 @@ nav{
 
 }
 .subbs{
-    width: 85%;
+    width: 95%;
     height: 10px;
     background-color:#ff014e;
     border-style: none;
@@ -279,8 +284,8 @@ nav{
     }
 } 
 .shape{
-    width: 300px;
-    height: 400px;
+    width: 260px;
+    height: 200px;
     background-color: rgb(33 36 40);
     box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -288,17 +293,43 @@ nav{
     align-items: center;
     flex: 0 0 calc(22.22% - 10px);
     margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.pi{
+    margin-top: 5px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 .pcon{
     text-align: center;
     font-size: large;
-    height: 200px;
+    height: 160px;
     width: 280px;
     color: #ff014e;
+    position: fixed;
 }
+/* shape hover */
+.shape:hover{
+    .pi{
+        transition: 0.5s ease-in-out;
+        transform: translate(-3.3rem, -3.8rem);
+    }
+}
+.ar{
+    text-decoration: none;
+}
+
 .phead{
-    margin-top: 5px;
-    font-size: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    height: 100%;
+    /* color: #ff014e; */
+    color: #f5f5f5;
+    text-decoration: none;
 }
 .txt{
     font-size: 12px;
@@ -310,10 +341,7 @@ nav{
     justify-content: space-evenly;
     column-gap: 70px;
 }
-.pi{
-    margin-top: 5px;
-    border-radius: 10px;
-}
+
 #project{
     height: fit-content;
     border-bottom-style: solid;
